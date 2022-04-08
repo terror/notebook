@@ -20,4 +20,5 @@ run *args:
 
 serve:
   just run generate
+  just fmt
   just run serve
