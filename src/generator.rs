@@ -23,10 +23,9 @@ impl Generator {
     )?;
 
     let post_template = env.get_template("post")?;
-
     posts.iter().try_for_each(|post| -> Result {
       Ok(fs::write(
-        format!("{}/{}", DOCS_PATH, post.title),
+        format!("{}/{}.html", DOCS_PATH, post.title),
         post_template.render(context! { post => post })?,
       )?)
     })?;

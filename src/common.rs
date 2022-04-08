@@ -10,6 +10,7 @@ pub(crate) use {
   chrono::prelude::{DateTime, Utc},
   clap::Parser as StructOpt,
   minijinja::{context, Environment},
+  rocket_contrib::serve::StaticFiles,
   serde::Serialize,
 };
 

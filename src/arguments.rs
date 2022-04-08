@@ -14,7 +14,15 @@ impl Arguments {
       Generate => {
         Generator::run(Loader::new(PathBuf::from(CONTENT_PATH)).load()?)
       }
-      Serve => Ok(()),
+      Serve => {
+        rocket::ignite()
+          .mount(
+            "/",
+            StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/docs")),
+          )
+          .launch();
+        Ok(())
+      }
     }
   }
 }
