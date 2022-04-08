@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta property="og:title" content="liam" />
+    <meta property="og:description" content="liam's notes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notes.liam.rs" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="liam's musings"
+      href="./index.xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>notes.liam.rs</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151954055-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-151954055-3');
+    </script>
+  </head>
+  <body>
+    <div>
+      <img
+        src="https://files.catbox.moe/zjuojf.jpeg"
+        width="100"
+        height="100"
+      />
+      <h4 class="subheading">liam's notes</h4>
+    </div>
+    <div class="posts">
+      <div class="post">
+        <table>
+          <tr>
+            <td class="recent-heading">
+              <span class="recent-heading">Recent Posts</span>
+            </td>
+          </tr>
+          {% for post in posts %}
+          <tr>
+            <td class="table-post">
+              <div class="date">{{ post.date }}</div>
+              <a href="{{ post.link }}" class="post-link">
+                <span class="post-link">{{ post.title }}</span>
+              </a>
+            </td>
+            <td class="table-stats">
+              <span class="stats-number">{{ post.read_time }}</span>
+              <span class="stats-unit">min</span>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
