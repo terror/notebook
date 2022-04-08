@@ -10,7 +10,7 @@ mod system_time_ext;
 
 fn main() {
   if let Err(error) = Arguments::parse().run() {
-    println!("{error}");
+    println!("error: {error}");
     process::exit(1);
   }
 }

@@ -23,9 +23,17 @@ impl Generator {
     )?;
 
     let post_template = env.get_template("post")?;
+
     posts.iter().try_for_each(|post| -> Result {
+      let directory_path =
+        PathBuf::from(format!("{}/{}", DOCS_PATH, post.title));
+
+      if !directory_path.exists() {
+        fs::create_dir(&directory_path)?;
+      }
+
       Ok(fs::write(
-        format!("{}/{}.html", DOCS_PATH, post.title),
+        format!("{}/index.html", directory_path.display()),
         post_template.render(context! { post => post })?,
       )?)
     })?;
