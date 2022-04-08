@@ -1,6 +1,6 @@
 pub(crate) use std::{
   fs,
-  path::PathBuf,
+  path::{Path, PathBuf},
   process::{self, Command},
   str,
   time::SystemTime,

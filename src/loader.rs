@@ -11,12 +11,10 @@ impl Loader {
   }
 
   pub(crate) fn load(&self) -> Result<Vec<Post>> {
-    Ok(
-      fs::read_dir(&self.path)?
-        .collect::<Result<Vec<_>, _>>()?
-        .iter()
-        .map(|path| Post::from_path(path.path()))
-        .collect::<Result<Vec<_>, _>>()?,
-    )
+    fs::read_dir(&self.path)?
+      .collect::<Result<Vec<_>, _>>()?
+      .iter()
+      .map(|path| Post::from_path(path.path()))
+      .collect::<Result<Vec<_>, _>>()
   }
 }

@@ -3,7 +3,7 @@ use crate::common::*;
 pub(crate) struct Parser;
 
 impl Parser {
-  pub(crate) fn parse(path: &PathBuf) -> Result<String> {
+  pub(crate) fn parse(path: &Path) -> Result<String> {
     Ok(
       str::from_utf8(
         &Command::new("pandoc")
