@@ -8,9 +8,6 @@ alias r := run
 default:
   just --list
 
-dev:
-  open -a 'Google Chrome' ./docs/index.html
-
 fmt:
 	cargo fmt
 	prettier --write .
@@ -20,3 +17,7 @@ forbid:
 
 run *args:
 	cargo run {{args}}
+
+serve:
+  just run generate
+  just run serve
