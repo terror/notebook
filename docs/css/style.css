@@ -7,18 +7,6 @@ div.hot-links {
   margin: -0.5rem 0;
 }
 
-.feed-button,
-.donate-button {
-  background-color: var(--dark-white);
-  border-radius: 0.2rem;
-  border: 0px solid var(--dark-white);
-  color: var(--black) !important;
-  font-size: 0.8rem;
-  margin: -0.5rem 0;
-  padding: 0.3rem 0.5rem;
-  text-decoration: none;
-}
-
 ::-moz-selection,
 ::selection {
   color: var(--black);
@@ -67,7 +55,7 @@ body {
   background-color: var(--white);
   color: var(--black);
   padding: 0;
-  padding-top: 2rem;
+  padding-left: 2rem;
   padding-bottom: 2rem;
   text-align: center;
 }
@@ -261,10 +249,6 @@ a:active {
 
 .post-text {
   font-size: 0.9rem;
-}
-
-ul {
-  list-style: lower-greek inside none;
 }
 
 .stats {

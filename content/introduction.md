@@ -1,4 +1,6 @@
-## Introduction
+---
+title: Introduction
+---
 
 This is a test post!
 

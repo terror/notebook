@@ -11,12 +11,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://notes.liam.rs" />
     <link
-      rel="alternate"
-      type="application/atom+xml"
-      title="liam's musings"
-      href="./index.xml"
-    />
-    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="/favicon/apple-touch-icon.png"
@@ -40,8 +34,7 @@
       color="#5bbad5"
     />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>notes.liam.rs</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <title>Liam's Notebook</title>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-151954055-3"
@@ -56,27 +49,16 @@
     </script>
   </head>
   <body>
-    <div>
-      <img
-        src="https://files.catbox.moe/zjuojf.jpeg"
-        width="100"
-        height="100"
-      />
-      <h4 class="subheading">liam's notes</h4>
-    </div>
+    <h2>Liam's Notebook</h2>
+    <p>A collection of half-baked notions</p>
     <div class="posts">
       <div class="post">
         <table>
-          <tr>
-            <td class="recent-heading">
-              <span class="recent-heading">Recent Posts</span>
-            </td>
-          </tr>
           {% for post in posts %}
           <tr>
             <td class="table-post">
               <div class="date">{{ post.date }}</div>
-              <a href="{{ post.link }}" class="post-link">
+              <a href="{{ post.title }}" class="post-link">
                 <span class="post-link">{{ post.title }}</span>
               </a>
             </td>
