@@ -10,3 +10,4 @@ minijinja = "0.15.0"
 rocket = "0.4.10"
 rocket_contrib = "0.4.10"
 serde = { version = "1.0", features = ["derive"] }
+yaml-front-matter = "0.1.0"

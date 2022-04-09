@@ -11,7 +11,8 @@ pub(crate) use {
   clap::Parser as StructOpt,
   minijinja::{context, Environment},
   rocket_contrib::serve::StaticFiles,
-  serde::Serialize,
+  serde::{Deserialize, Serialize},
+  yaml_front_matter::YamlFrontMatter,
 };
 
 pub(crate) use crate::{

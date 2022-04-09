@@ -26,7 +26,7 @@ impl Generator {
 
     posts.iter().try_for_each(|post| -> Result {
       let directory_path =
-        PathBuf::from(format!("{}/{}", DOCS_PATH, post.title));
+        PathBuf::from(format!("{}/{}", DOCS_PATH, post.file_stem));
 
       if !directory_path.exists() {
         fs::create_dir(&directory_path)?;

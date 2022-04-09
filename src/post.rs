@@ -2,19 +2,29 @@ use crate::common::*;
 
 #[derive(Debug, Serialize)]
 pub(crate) struct Post {
-  pub(crate) title: String,
+  title: String,
+  pub(crate) file_stem: String,
   date: String,
   content: String,
   read_time: String,
   height: String,
 }
 
+#[derive(Debug, Deserialize)]
+struct Frontmatter {
+  title: String,
+}
+
 impl Post {
   pub(crate) fn from_path(path: PathBuf) -> Result<Self> {
     let content = fs::read_to_string(&path)?;
 
+    let Frontmatter { title } =
+      YamlFrontMatter::parse::<Frontmatter>(&content)?.metadata;
+
     Ok(Post {
-      title: path.file_stem().unwrap().to_str().unwrap().to_string(),
+      title,
+      file_stem: path.file_stem().unwrap().to_str().unwrap().to_string(),
       date: format!(
         "{}",
         fs::metadata(&path)?
