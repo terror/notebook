@@ -5,6 +5,10 @@ pub(crate) struct Generator;
 
 impl Generator {
   pub(crate) fn run(posts: Vec<Post>) -> Result {
+    let mut posts = posts;
+
+    posts.sort_by(|a, b| b.cmp(a));
+
     let mut env = Environment::new();
 
     let index_template_content =
@@ -26,7 +30,7 @@ impl Generator {
 
     posts.iter().try_for_each(|post| -> Result {
       let directory_path =
-        PathBuf::from(format!("{}/{}", DOCS_PATH, post.file_stem));
+        PathBuf::from(DOCS_PATH).join(post.file_stem.clone());
 
       if !directory_path.exists() {
         fs::create_dir(&directory_path)?;

@@ -2,6 +2,7 @@ use crate::common::*;
 
 mod arguments;
 mod common;
+mod frontmatter;
 mod generator;
 mod loader;
 mod parser;

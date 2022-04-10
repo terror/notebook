@@ -1,4 +1,5 @@
 pub(crate) use std::{
+  cmp::Ordering,
   fs,
   path::{Path, PathBuf},
   process::{self, Command},
@@ -16,8 +17,8 @@ pub(crate) use {
 };
 
 pub(crate) use crate::{
-  arguments::Arguments, generator::Generator, loader::Loader, parser::Parser,
-  post::Post,
+  arguments::Arguments, frontmatter::Frontmatter, generator::Generator,
+  loader::Loader, parser::Parser, post::Post,
 };
 
 pub(crate) use crate::system_time_ext::SystemTimeExt;
