@@ -1,10 +1,10 @@
 use crate::common::*;
 
-#[derive(Debug)]
+#[derive(Debug, StructOpt)]
 pub(crate) struct Generator;
 
 impl Generator {
-  pub(crate) fn run(posts: Vec<Post>) -> Result {
+  pub(crate) fn run(&self, posts: Vec<Post>) -> Result {
     let mut posts = posts;
 
     posts.sort_by(|a, b| b.cmp(a));

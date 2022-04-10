@@ -7,6 +7,7 @@ mod generator;
 mod loader;
 mod parser;
 mod post;
+mod server;
 mod system_time_ext;
 
 fn main() {

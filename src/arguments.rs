@@ -2,8 +2,10 @@ use crate::common::*;
 
 #[derive(Debug, StructOpt)]
 pub(crate) enum Arguments {
-  Generate,
-  Serve,
+  #[clap(alias = "g", override_help = "Generate static assets")]
+  Generate(Generator),
+  #[clap(alias = "s", override_help = "Serve static assets locally")]
+  Serve(Server),
 }
 
 impl Arguments {
@@ -11,18 +13,10 @@ impl Arguments {
     use Arguments::*;
 
     match self {
-      Generate => {
-        Generator::run(Loader::new(PathBuf::from(CONTENT_PATH)).load()?)
+      Generate(generator) => {
+        generator.run(Loader::new(PathBuf::from(CONTENT_PATH)).load()?)
       }
-      Serve => {
-        rocket::ignite()
-          .mount(
-            "/",
-            StaticFiles::from(concat!(env!("CARGO_MANIFEST_DIR"), "/docs")),
-          )
-          .launch();
-        Ok(())
-      }
+      Serve(server) => server.run(),
     }
   }
 }

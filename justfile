@@ -21,4 +21,4 @@ run *args:
 serve:
   just run generate
   just fmt
-  just run serve
+  just run serve --path docs
