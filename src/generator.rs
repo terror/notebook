@@ -40,8 +40,6 @@ impl Generator {
         format!("{}/index.html", directory_path.display()),
         post_template.render(context! { post => post })?,
       )?)
-    })?;
-
-    Ok(())
+    })
   }
 }

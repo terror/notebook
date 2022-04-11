@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta property="og:title" content="Feedback loops" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notes.liam.rs" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <title>Feedback loops · Liam's Notebook</title>
+  </head>
+  <body>
+    <div class="posts">
+      <div class="post">
+        <a href="/" class="post-end-link">Home</a>
+        <span>/</span>
+        <a class="post-end-link">Feedback loops</a>
+        <a
+          class="stats post-end-link"
+          href="https://raw.githubusercontent.com/terror/notes/master/content/feedback-loops.md"
+          >View Raw</a
+        >
+        <div class="separator"></div>
+        <div class="date">
+          04/11 — 2022
+          <div class="stats">
+            <span class="stats-number">9.19</span>
+            <span class="stats-unit">cm</span>
+            <span class="stats-number">0.9</span>
+            <span class="stats-unit">min</span>
+          </div>
+        </div>
+        <h1>Feedback loops</h1>
+        <div class="post-text">
+          <p>
+            There is a correlation between how long I spend on a project before
+            I move on to other things and how tight the feedback loop is during
+            the development of a project.
+          </p>
+          <p>
+            Generally speaking, the tighter the feedback loop, the easier and
+            faster it is to continue pushing through to an initial working
+            product.
+          </p>
+          <p>
+            I now always ask myself – can I make the process of making a change
+            and viewing its result faster?
+          </p>
+          <p>Most of the time, I can, and it usually looks like this:</p>
+          <ul>
+            <li>Writing more tests, preferably before writing a feature</li>
+            <li>
+              Storing project specific commands and aliasing them in a
+              <a href="https://github.com/casey/just">justfile</a>
+            </li>
+            <li>
+              Increasing system observability – e.g., by setting up logging
+            </li>
+            <li>
+              Being wary of bringing in large dependencies that could result in
+              dramatically increased compile times
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/wikipedia-preview.production.js"></script>
+    <script type="text/javascript">
+      wikipediaPreview.init({
+        root: document.querySelector('.post-text'),
+        detectLinks: true,
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
+</html>
