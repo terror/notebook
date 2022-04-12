@@ -55,7 +55,7 @@ body {
   background-color: var(--white);
   color: var(--black);
   padding: 0;
-  padding-left: 2rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
 }
