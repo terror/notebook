@@ -4,11 +4,12 @@ title: Broken glass
 
 I’ve been going through Hazlitt’s [_Economics in One Lesson_][1], a basic
 introduction to economics and economic fallacy by way of delineating a plethora
-of engaging examples. One in particular stood out to me: _The Broken Pane of Glass_.
+of engaging examples. One in particular stood out to me: _The Broken Pane of
+Glass_.
 
 Suppose a hoodlum were to throw a brick into a small bakery. The window is
-broken, pies and pastries now scattered in a pile of broken glass. What are
-the consequences?
+broken, pies and pastries now scattered in a pile of broken glass. What are the
+consequences?
 
 One may be tempted at first to point out that the incident will surely create
 business for some carpenter, who will in turn create business for other
@@ -38,8 +39,8 @@ with a hidden cost: foreclosed possible production in neglected sectors.
 To end with Hazlitt:
 
 > The art of economics consists in looking not merely at the immediate but at
-> the longer effects of any act or policy; it consists in tracing the consequences
-> of that policy not merely for one group but for all groups.
+> the longer effects of any act or policy; it consists in tracing the
+> consequences of that policy not merely for one group but for all groups.
 
 [1]: https://en.wikipedia.org/wiki/Economics_in_One_Lesson
 [2]: https://en.wikipedia.org/wiki/Parable_of_the_broken_window
