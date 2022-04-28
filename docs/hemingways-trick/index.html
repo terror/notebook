@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta property="og:title" content="Hemingway's trick" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notes.liam.rs" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <title>Hemingway's trick · Liam's Notebook</title>
+  </head>
+  <body>
+    <div class="posts">
+      <div class="post">
+        <a href="/" class="post-end-link">Home</a>
+        <span>/</span>
+        <a class="post-end-link">Hemingway's trick</a>
+        <a
+          class="stats post-end-link"
+          href="https://raw.githubusercontent.com/terror/notes/master/content/hemingways-trick.md"
+          >View Raw</a
+        >
+        <div class="separator"></div>
+        <div class="date">
+          04/28 — 2022
+          <div class="stats">
+            <span class="stats-number">11.59</span>
+            <span class="stats-unit">cm</span>
+            <span class="stats-number">1.6</span>
+            <span class="stats-unit">min</span>
+          </div>
+        </div>
+        <h1>Hemingway's trick</h1>
+        <div class="post-text">
+          <p>In <em>A Moveable Feast</em>, Hemingway writes:</p>
+          <blockquote>
+            <p>
+              I would stand and look out over the roofs of Paris and think, “Do
+              not worry. You have always written before and you will write now.
+              All you have to do is write one true sentence. Write the truest
+              sentence that you know.” So finally I would write one true
+              sentence, and then go on from there. It was easy then because
+              there was always one true sentence that I knew or had seen or had
+              heard someone say. If I started to write elaborately, or like
+              someone introducing or presenting something, I found that I could
+              cut that scrollwork or ornament out and throw it away and start
+              with the first true simple declarative sentence I had written.
+            </p>
+          </blockquote>
+          <p>
+            Programmers, like writers, are often asking the same question –
+            where do I begin?
+          </p>
+          <p>
+            Hemingway’s solution for writing is to write ‘one true sentence’,
+            which when transferred over to the context of writing software,
+            translates to ‘one true test case’.
+          </p>
+          <p>
+            One can often start by implementing some complex feature, much like
+            a narrative in prose, only to be discouraged later on as what was
+            written either over or under shot the needs of the project. Best to
+            start simple.
+          </p>
+          <p>
+            Write a failing test for the behavior that you desire, and then go
+            from there.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="/js/wikipedia-preview.production.js"></script>
+    <script type="text/javascript">
+      wikipediaPreview.init({
+        root: document.querySelector('.post-text'),
+        detectLinks: true,
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
+</html>
