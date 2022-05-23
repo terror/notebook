@@ -8,12 +8,22 @@ pub(crate) use std::{
 };
 
 pub(crate) use {
+  axum::{
+    http::{
+      header::{self, HeaderValue},
+      StatusCode,
+    },
+    routing::get_service,
+    Router,
+  },
   chrono::prelude::{DateTime, Utc},
   clap::Parser as StructOpt,
   minijinja::{context, Environment},
-  rocket::{config::Environment as ServerEnvironment, Config},
-  rocket_contrib::serve::StaticFiles,
   serde::{Deserialize, Serialize},
+  std::net::SocketAddr,
+  tower_http::{
+    services::ServeDir, set_header::SetResponseHeaderLayer, trace::TraceLayer,
+  },
   yaml_front_matter::YamlFrontMatter,
 };
 

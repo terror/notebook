@@ -10,8 +10,9 @@ mod post;
 mod server;
 mod system_time_ext;
 
-fn main() {
-  if let Err(error) = Arguments::parse().run() {
+#[tokio::main]
+async fn main() {
+  if let Err(error) = Arguments::parse().run().await {
     println!("error: {error}");
     process::exit(1);
   }

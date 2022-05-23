@@ -9,14 +9,14 @@ pub(crate) enum Arguments {
 }
 
 impl Arguments {
-  pub(crate) fn run(self) -> Result {
+  pub(crate) async fn run(self) -> Result {
     use Arguments::*;
 
     match self {
       Generate(generator) => {
         generator.run(Loader::new(PathBuf::from(CONTENT_PATH)).load()?)
       }
-      Serve(server) => server.run(),
+      Serve(server) => server.run().await,
     }
   }
 }
