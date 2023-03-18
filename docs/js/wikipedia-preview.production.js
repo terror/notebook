@@ -254,9 +254,10 @@
                       (l = btoa(
                         unescape(encodeURIComponent(JSON.stringify(o)))
                       )),
-                      (s = 'sourceMappingURL=data:application/json;charset=utf-8;base64,'.concat(
-                        l
-                      )),
+                      (s =
+                        'sourceMappingURL=data:application/json;charset=utf-8;base64,'.concat(
+                          l
+                        )),
                       '/*# '.concat(s, ' */')),
                     t = r.sources.map(function (e) {
                       return '/*# sourceURL='
@@ -3556,7 +3557,8 @@
           return Oe(e, n, i.dir, De(e, r), a);
         },
         Ce = function (e, i, n) {
-          var r = '\n\t\t<div class="wikipediapreview-body wikipediapreview-body-loading">\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line smaller"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line smaller"></div>\n\t\t</div>\n\t\t<div class="wikipediapreview-footer-loading"></div>\n\t'.trim();
+          var r =
+            '\n\t\t<div class="wikipediapreview-body wikipediapreview-body-loading">\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line smaller"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line larger"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line medium"></div>\n\t\t\t<div class="wikipediapreview-body-loading-line smaller"></div>\n\t\t</div>\n\t\t<div class="wikipediapreview-footer-loading"></div>\n\t'.trim();
           return Oe(i, e, n, De(i), r);
         },
         Pe = function (e, i, n) {

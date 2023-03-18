@@ -1,0 +1,16 @@
+#!/bin/bash
+
+date() {
+  formatted="${1//-/}0000.00"
+  touch -a -m -t "$formatted" content/"$2".md
+}
+
+main() {
+  date "2022-04-08" "introduction"
+  date "2022-04-09" "broken-glass"
+  date "2022-04-11" "feedback-loops"
+  date "2022-04-26" "2022-26-recent-books"
+  date "2022-04-28" "hemingways-trick"
+}
+
+main

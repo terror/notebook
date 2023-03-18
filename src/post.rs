@@ -39,7 +39,7 @@ impl Post {
     let Frontmatter { title } =
       YamlFrontMatter::parse::<Frontmatter>(&content)?.metadata;
 
-    let date = fs::metadata(&path)?.created()?.into_datetime();
+    let date = fs::metadata(&path)?.modified()?.into_datetime();
 
     Ok(Post {
       title,

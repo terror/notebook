@@ -19,6 +19,7 @@ run *args:
 	cargo run {{args}}
 
 serve:
+  ./bin/last-modified
   just run generate
   just fmt
   just run serve --path docs
