@@ -1,4 +1,4 @@
-use crate::common::*;
+use super::*;
 
 #[derive(Debug, Serialize)]
 pub(crate) struct Post {
@@ -46,7 +46,7 @@ impl Post {
       file_stem: path.file_stem().unwrap().to_str().unwrap().to_string(),
       datetime: date,
       date: date.format("%m/%d — %Y").to_string(),
-      content: Parser::parse(&path)?,
+      content: parser::parse(&path)?,
       read_time: format!(
         "{:.1}",
         content.split_whitespace().count() as f64 / 150.0

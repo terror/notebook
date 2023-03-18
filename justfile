@@ -23,3 +23,6 @@ serve:
   just run generate
   just fmt
   just run serve --path docs
+
+watch +COMMAND='run':
+  cargo watch --clear --exec "{{COMMAND}}"

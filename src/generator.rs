@@ -1,4 +1,4 @@
-use crate::common::*;
+use super::*;
 
 #[derive(Debug, StructOpt)]
 pub(crate) struct Generator;
