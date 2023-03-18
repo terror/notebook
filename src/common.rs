@@ -4,7 +4,6 @@ pub(crate) use std::{
   path::{Path, PathBuf},
   process::{self, Command},
   str,
-  time::SystemTime,
 };
 
 pub(crate) use {
@@ -31,8 +30,6 @@ pub(crate) use crate::{
   arguments::Arguments, frontmatter::Frontmatter, generator::Generator,
   loader::Loader, parser::Parser, post::Post, server::Server,
 };
-
-pub(crate) use crate::system_time_ext::SystemTimeExt;
 
 pub(crate) type Error = Box<dyn std::error::Error>;
 pub(crate) type Result<T = (), E = Error> = std::result::Result<T, E>;
